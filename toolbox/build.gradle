@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.novoda.bintray-release'
+
+def getVersionName = { ->
+    return "0.1.0"
+}
+
+def getVersionCode = { ->
+    return 10
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode getVersionCode()
+        versionName getVersionName()
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation rootProject.deps.androidAppCompat
+    implementation rootProject.deps.androidKTX
+    implementation rootProject.deps.androidRecyclerView
+
+    api rootProject.deps.gson
+    api rootProject.deps.rxjava
+}
+
+publish {
+    userOrg = 'xueqiumobile'
+    groupId = 'com.xueqiu.toolbox'
+    artifactId = 'toolbox'
+    publishVersion = getVersionName()
+    desc = 'Some simple kotlin extension methods and tools can speed up the development of Android.'
+    website = 'https://github.com/snowman-team/Toolbox'
+}
