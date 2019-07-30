@@ -7,15 +7,13 @@ Some simple kotlin extension methods and tools can speed up the development of A
 ## Installation
 
 ```groovy
-repositories {
-	maven { url 'https://jitpack.io' }
-}
+// add jitpack
+maven { url 'https://jitpack.io' }
 ```
 
 ```groovy
-dependencies {
-    	implementation ('implementation 'com.github.snowman-team:Toolbox:0.1.x'')
-}
+// add dependency
+implementation "com.github.snowman-team:Toolbox:0.1.x"
 ```
 
 ## Usage
