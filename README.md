@@ -7,7 +7,6 @@ Some simple kotlin extension methods and tools can speed up the development of A
 ## Installation
 
 ```groovy
-// add jitpack
 maven { url "https://xueqiumobile.bintray.com/maven" }
 ```
 
