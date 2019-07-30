@@ -1,4 +1,5 @@
 Snowball Android Toolbox
+[![Release](https://jitpack.io/v/snowman-team/Toolbox.svg)](https://jitpack.io/#snowman-team/Toolbox)
 ============
 
 Some simple kotlin extension methods and tools can speed up the development of Android.
@@ -13,7 +14,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation ('')
+    	implementation ('implementation 'com.github.snowman-team:Toolbox:0.1.x'')
 }
 ```
 
@@ -49,7 +50,7 @@ object AppStore {
 }
 ```
 
-then use it
+Then use it
 
 ```kotlin
 // write data
@@ -61,13 +62,14 @@ val data = AppStore.testData
 
 ### Ext
 
-- CommonExt
-- ContextExt
-- FileExt
-- RxExt
-- StringExt
+- [CommonExt](https://github.com/snowman-team/Toolbox/blob/master/toolbox/src/main/java/com/xueqiu/toolbox/ext/CommonExt.kt)
+- [ContextExt](https://github.com/snowman-team/Toolbox/blob/master/toolbox/src/main/java/com/xueqiu/toolbox/ext/ContextExt.kt)
+- [FileExt](https://github.com/snowman-team/Toolbox/blob/master/toolbox/src/main/java/com/xueqiu/toolbox/ext/FileExt.kt)
+- [RxExt](https://github.com/snowman-team/Toolbox/blob/master/toolbox/src/main/java/com/xueqiu/toolbox/ext/RxExt.kt)
+- [StringExt](https://github.com/snowman-team/Toolbox/blob/master/toolbox/src/main/java/com/xueqiu/toolbox/ext/StringExt.kt)
+...
 
 ### Utils
 
-- DesignUtils
+- [DesignUtils](https://github.com/snowman-team/Toolbox/blob/master/toolbox/src/main/java/com/xueqiu/toolbox/ui/DesignUtils.kt)
 
