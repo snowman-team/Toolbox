@@ -6,6 +6,12 @@ Some simple kotlin extension methods and tools can speed up the development of A
 ## Installation
 
 ```groovy
+repositories {
+	maven { url 'https://jitpack.io' }
+}
+```
+
+```groovy
 dependencies {
     implementation ('')
 }

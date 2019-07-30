@@ -3,15 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.dcendents.android-maven'
 
-def getVersionName = { ->
-    return "0.1.0"
-}
-
-def getVersionCode = { ->
-    return 10
-}
+group = GROUP_ID
+version = VERSION
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -19,8 +14,6 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode getVersionCode()
-        versionName getVersionName()
     }
 
     buildTypes {
@@ -50,13 +43,4 @@ dependencies {
 
     api rootProject.deps.gson
     api rootProject.deps.rxjava
-}
-
-publish {
-    userOrg = 'xueqiumobile'
-    groupId = 'com.xueqiu.toolbox'
-    artifactId = 'toolbox'
-    publishVersion = getVersionName()
-    desc = 'Some simple kotlin extension methods and tools can speed up the development of Android.'
-    website = 'https://github.com/snowman-team/Toolbox'
 }
