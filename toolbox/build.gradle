@@ -3,10 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'com.github.dcendents.android-maven'
-
-group = GROUP_ID
-version = VERSION
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -28,8 +25,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.sourceCompatibility
     }
 
 }
@@ -43,4 +40,13 @@ dependencies {
 
     api rootProject.deps.gson
     api rootProject.deps.rxjava
+}
+
+publish {
+    userOrg = USER_ORG
+    groupId = GROUP_ID
+    artifactId = 'toolbox'
+    publishVersion = VERSION
+    desc = 'Some simple kotlin extension methods and tools can speed up the development of Android.'
+    website = 'https://github.com/snowman-team/Toolbox'
 }

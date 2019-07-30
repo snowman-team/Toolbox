@@ -1,6 +1,7 @@
 rootProject.ext.compileSdkVersion = 29
 rootProject.ext.minSdkVersion = 21
 rootProject.ext.targetSdkVersion = 29
+rootProject.ext.sourceCompatibility = JavaVersion.VERSION_1_8
 
 rootProject.ext.deps = [
         // android

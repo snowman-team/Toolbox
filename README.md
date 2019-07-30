@@ -8,12 +8,12 @@ Some simple kotlin extension methods and tools can speed up the development of A
 
 ```groovy
 // add jitpack
-maven { url 'https://jitpack.io' }
+maven { url "https://xueqiumobile.bintray.com/maven" }
 ```
 
 ```groovy
-// add dependency
-implementation "com.github.snowman-team:Toolbox:0.1.x"
+// add dependency, please replace x.y.z to the latest version
+implementation "com.xueqiu.toolbox:toolbox:x.y.z"
 ```
 
 ## Usage
