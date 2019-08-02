@@ -11,5 +11,6 @@ rootProject.ext.deps = [
 
         gson                    : "com.google.code.gson:gson:2.8.5",
         rxjava                  : "io.reactivex.rxjava3:rxjava:3.0.0-RC1",
+        rxRelay                 : "com.jakewharton.rxrelay2:rxrelay:2.1.0",
 ]
 

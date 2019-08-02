@@ -57,6 +57,20 @@ val data = AppStore.testData
 
 ```
 
+### RxBus
+
+```kotlin
+// post message
+Courier.post(TestEvent(params))
+
+// and receive message
+Courier.toObservable(TestEvent::class.java)
+    .observeOn(MainSchedulers.mainThread)
+    .subscribe { 
+        // do something
+    }
+```
+
 ### Ext
 
 - [CommonExt](https://github.com/snowman-team/Toolbox/blob/master/toolbox/src/main/java/com/xueqiu/toolbox/ext/CommonExt.kt)

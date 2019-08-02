@@ -40,6 +40,10 @@ dependencies {
 
     api rootProject.deps.gson
     api rootProject.deps.rxjava
+
+    implementation(rootProject.deps.rxRelay) {
+        exclude(group: 'io.reactivex.rxjava2')
+    }
 }
 
 publish {
