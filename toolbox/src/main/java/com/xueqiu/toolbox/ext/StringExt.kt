@@ -1,22 +1,8 @@
 package com.xueqiu.toolbox.ext
 
-import android.net.Uri
 import java.security.MessageDigest
 import java.text.SimpleDateFormat
 import java.util.*
-
-const val REGEX_IP = "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b"
-
-fun String?.toUri(): Uri? {
-    if (this.isNullOrBlank()) {
-        return null
-    }
-    return try {
-        Uri.parse(this)
-    } catch (e: Exception) {
-        null
-    }
-}
 
 fun String.toMD5(): String? {
     val md5: String
@@ -42,11 +28,6 @@ fun String.toSHA1(): String? {
         return null
     }
     return sha1
-}
-
-fun String?.isIP(): Boolean {
-    if (null == this) return false
-    return this.matches(Regex(REGEX_IP))
 }
 
 fun String.toCalendar(): Calendar? {
@@ -81,7 +62,7 @@ fun String.toCalendar(): Calendar? {
     }
 
     val date = SimpleDateFormat("EEE MMM d HH:mm:ss yyyy", Locale.ENGLISH).parse(timePart)
-            ?: return null
+        ?: return null
     val calendar = Calendar.getInstance()
     calendar.time = date
     calendar.timeZone = TimeZone.getTimeZone("GMT$timeZonePart")

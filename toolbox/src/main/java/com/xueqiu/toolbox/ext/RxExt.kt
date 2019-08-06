@@ -12,8 +12,7 @@ fun <T> Observable<T>?.subscribeSafely(consumer: Consumer<T>) =
         this?.subscribe(consumer, Consumer<Throwable> { })
 
 inline fun <reified T> Observable<T>.applyNetworkSchedulers(): Observable<T> {
-    return this.subscribeOn(Schedulers.io())
-            .observeOn(MainSchedulers.mainThread)
+    return this.subscribeOn(Schedulers.io()).observeOn(MainSchedulers.mainThread)
 }
 
 inline fun <reified T> Observable<T>.applyComputationSchedulers(): Observable<T> {

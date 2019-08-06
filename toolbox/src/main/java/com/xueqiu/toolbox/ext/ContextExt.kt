@@ -9,10 +9,6 @@ import android.os.Handler
 import android.os.Looper
 import java.util.*
 
-const val KB: Long = 1024
-const val MB: Long = 1024 * KB
-const val GB: Long = 1024 * MB
-
 fun Context.runOnMainThread(action: Context.() -> Unit) {
     if (Looper.getMainLooper().thread == Thread.currentThread()) {
         action()

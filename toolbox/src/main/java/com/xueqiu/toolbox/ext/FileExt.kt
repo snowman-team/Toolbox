@@ -3,6 +3,10 @@ package com.xueqiu.toolbox.ext
 import java.io.File
 import java.io.InputStream
 
+const val KB: Long = 1024
+const val MB: Long = 1024 * KB
+const val GB: Long = 1024 * MB
+
 // return kb
 fun File?.fileSize(): Long {
     if (null == this) return 0
