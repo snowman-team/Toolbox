@@ -1,4 +1,4 @@
-Snowball Android Toolbox
+Snowball Android Toolbox <br> [ ![Download](https://api.bintray.com/packages/aquarids/maven/toolbox/images/download.svg?version=0.1.0) ](https://bintray.com/aquarids/maven/toolbox/0.1.0/link)
 ============
 
 Some simple kotlin extension methods and tools can speed up the development of Android.
