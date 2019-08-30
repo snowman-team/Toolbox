@@ -6,9 +6,6 @@ Some simple kotlin extension methods and tools can speed up the development of A
 ## Installation
 
 ```groovy
-repositories {
-    maven { url "https://xueqiumobile.bintray.com/maven" }
-}
 dependencies {
     // add dependency, please replace x.y.z to the latest version
     implementation "com.xueqiu.toolbox:toolbox:x.y.z"
