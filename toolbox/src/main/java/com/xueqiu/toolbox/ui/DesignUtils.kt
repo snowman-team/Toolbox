@@ -19,7 +19,7 @@ class DesignUtils {
         fun getAttrDrawable(context: Context, attrId: Int): Drawable? {
             val typedValue = TypedValue()
             context.theme.resolveAttribute(attrId, typedValue, true)
-            val drawableRes = typedValue.resourceId
+            val drawableRes = typedValue.data
             return getDrawable(context, drawableRes)
         }
 
@@ -27,7 +27,7 @@ class DesignUtils {
         fun getAttrColor(context: Context, attrId: Int): Int {
             val typedValue = TypedValue()
             context.theme.resolveAttribute(attrId, typedValue, true)
-            val colorRes = typedValue.resourceId
+            val colorRes = typedValue.data
             return getColor(context, colorRes)
         }
 
